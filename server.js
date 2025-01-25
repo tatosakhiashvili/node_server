@@ -1,13 +1,16 @@
-// const jsonServer = require('json-server');
-const cors = require('cors');
-// const server = jsonServer.create();
-// const router = jsonServer.router('db.json');
-// const middlewares = jsonServer.defaults();
+// Load the http module to create an HTTP server.
+const http = require('http');
 
-server.use(cors()); // Enable CORS
-server.use(middlewares);
-server.use(router);
+// Configure the HTTP server to respond with a message.
+const server = http.createServer((req, res) => {
+  console.log('A request was made to the server!');
+  
+  // Set the response HTTP header and send a basic response.
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello, world!');
+});
 
-server.listen(process.env.PORT || 3000, () => {
-  console.log('JSON Server is running');
+// Listen on port 3000 and log a message when the server starts.
+server.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
 });
