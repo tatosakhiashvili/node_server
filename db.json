@@ -1,6 +1,6 @@
 {
   "posts": [
-    { "id": 1, "title": "Hello World" },
-    { "id": 2, "title": "JSON Server is cool!" }
+    { "id": 1, "title": "First post" },
+    { "id": 2, "title": "Second post" }
   ]
 }
